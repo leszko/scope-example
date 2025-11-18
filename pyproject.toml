@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.10.12"
 dependencies = [
-    "daydream-scope",
+    "daydream-scope[core]",
     "imageio>=2.37.0",
     "imageio-ffmpeg>=0.6.0",
     "opencv-python>=4.8.0",
