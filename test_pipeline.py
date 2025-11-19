@@ -8,9 +8,7 @@ from omegaconf import OmegaConf
 from scope.core.pipelines import LongLivePipeline
 from models_config import get_model_file_path, get_models_dir
 
-# Use local model.yaml file
-model_yaml_path = Path(__file__).parent / "model.yaml"
-
+# model_config will be auto-loaded from the pipeline's model.yaml
 config = OmegaConf.create(
     {
         "model_dir": str(get_models_dir()),
@@ -22,7 +20,6 @@ config = OmegaConf.create(
             get_model_file_path("WanVideo_comfy/umt5-xxl-enc-fp8_e4m3fn.safetensors")
         ),
         "tokenizer_path": str(get_model_file_path("Wan2.1-T2V-1.3B/google/umt5-xxl")),
-        "model_config": OmegaConf.load(model_yaml_path),
         "height": 480,
         "width": 832,
     }
