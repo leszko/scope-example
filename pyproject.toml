@@ -11,4 +11,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-daydream-scope = { git = "https://github.com/daydreamlive/scope", rev = "rafal/packages" }
+daydream-scope = { git = "https://github.com/daydreamlive/scope" }
